@@ -5,8 +5,8 @@
  */
 
 export const ENV_CONST = {
-    env: 'prod',
-    // env: 'test',
+    // env: 'prod',
+    env: 'test',
 }
 
 export function requestHost(env = 'prod', host = 'base') {
@@ -29,11 +29,11 @@ export function requestParams(params={}) {
 
 const _ENV_HOST = {
     prod: {
-        base: 'https://prodbase123.com',
-        auth: 'https://prodauth123.com'
+        base: 'http://prodbase123.com',
+        auth: 'http://prodauth123.com'
     },
     test: {
-        base: 'https://testase123.com',
-        auth: 'https://testauth123.com'
+        base: 'http://localhost:8197',
+        auth: 'http://192.168.1.3:8197'
     },
 }

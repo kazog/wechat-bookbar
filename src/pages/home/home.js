@@ -1,11 +1,22 @@
-// 
+/**
+ * User: Meng
+ * Date: 2022-04
+ * 首页
+ */
+import { queryBooks, queryHotBooks } from "../../modules/api/index";
+
 Page({
     data: {
-
+        itemList: [],
     },
 
-    onLoad: function (options) {
+    onLoad: async function (options) {
 
+        const res = await queryBooks({
+            pageNum: 1,
+            pageSize: 10,
+            keyword: ''
+        })
     },
 
     onReady: function () {
@@ -27,7 +38,7 @@ Page({
     onPullDownRefresh: function () {
 
     },
-    
+
     onReachBottom: function () {
 
     },

@@ -59,7 +59,7 @@ export function request({ env = ENV_CONST.env, host = 'base', url = '', method =
                 _loading(false);
                 _toast(toast, result.message, result.code);
             }
-        })
+        });
     });
 }
 
@@ -91,7 +91,7 @@ export function download(url) {
             complete: () => {
                 _loading(false);
             }
-        })
+        });
     });
 }
 
@@ -129,7 +129,7 @@ export function upload(file) {
                     data: null
                 })
             }
-        })
+        });
     });
 }
 
@@ -138,6 +138,8 @@ function _parseData(result, res) {
     result.data = res.data;
     result.header = res.header;
     result.code = 0;
+
+    return result;
 }
 
 function _parseError(result, data) {
@@ -148,6 +150,7 @@ function _parseError(result, data) {
         result.code = -10101;
         result.message = data.errMsg;
     }
+    return result;
 }
 
 function _pointLog(tag, msg) {

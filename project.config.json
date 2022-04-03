@@ -2,7 +2,7 @@
     "miniprogramRoot": "src/",
     "cloudfunctionRoot": "cloud/",
     "setting": {
-        "urlCheck": true,
+        "urlCheck": false,
         "es6": true,
         "enhance": true,
         "postcss": true,
@@ -28,16 +28,16 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-        "enableEngineNative": false,
         "useIsolateContext": true,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": false,
         "packNpmRelationList": [],
         "minifyWXSS": true,
         "disableUseStrict": false,
+        "minifyWXML": true,
         "showES6CompileOption": false,
         "useCompilerPlugins": false,
-        "minifyWXML": true
+        "ignoreUploadUnusedFiles": true
     },
     "appid": "wx14a11519f839a3c0",
     "projectname": "BookBar",
