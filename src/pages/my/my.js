@@ -40,7 +40,7 @@ Page({
 
     onShow: function () {
         let that = this;
-       
+
     },
 
     onPullDownRefresh: function () {
@@ -79,9 +79,9 @@ Page({
         if (!that.data.isLogin) {
             url = '/pages/my/login/login';
         }
-        // wx.navigateTo({
-        //   url
-        // })
+        wx.navigateTo({
+            url
+        })
     },
 
     showLogin: function () {

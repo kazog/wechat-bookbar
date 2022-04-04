@@ -2,10 +2,10 @@
 <view class="m-container">
 	<!-- <header back="{{false}}"/> -->
 	<!-- 顶部栏 -->
-	<image class="top-bg" mode="aspectFill" src="/images/icon/top_m.jpeg" />
+	<image class="top-bg" mode="aspectFill" src="/images/img/top_m.jpeg" />
 	<view class="top-layout">
 		<view class="user-box" bindtap="onInfoPress">
-			<image class="user-icon" hover-class="a-hover" src="{{user.avatar}}" />
+			<image class="user-icon" src="{{user.avatar}}" />
 			<view style="flex: 1">
 				<view class="user-name" hover-class="a-hover">{{user.nickName}}</view>
 				<view class="actives">{{user.province}}</view>

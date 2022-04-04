@@ -1,11 +1,11 @@
 // pages/my/mhome/mhome.js
 
 const maxH = 260;
-import {getUser} from '../../../modules/store/index';
+
 Page({
 
   data: {
-    user: {avatar: '/assets/icon/user_ic.png'},
+    user: { avatar: '/images/icon/user_ic.png' },
     alpha: 0,
     title: '',
     tabIndex: 0,
@@ -14,10 +14,7 @@ Page({
 
   onLoad: function () {
     let that = this;
-    const user = getUser();
-    that.setData({
-      user,
-    })
+
   },
 
   onPullDownRefresh: function () {
@@ -28,7 +25,7 @@ Page({
 
   },
 
-  onChangeTab: function(e) {
+  onChangeTab: function (e) {
     // console.log(e);
     let index = e.currentTarget.dataset.index;
     this.setData({
@@ -39,8 +36,8 @@ Page({
   onPageScroll: function (e) {
     // console.log(e);
     let that = this;
-    let alpha = e.scrollTop/maxH;
-    if(that.data.alpha > 1 && alpha > 1) {
+    let alpha = e.scrollTop / maxH;
+    if (that.data.alpha > 1 && alpha > 1) {
       return;
     }
     let title = that.data.user.nickName;
