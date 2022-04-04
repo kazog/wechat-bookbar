@@ -1,4 +1,26 @@
 <!--  -->
-<view>
-    <view>分类</view>
+<view class="h-container">
+  <header />
+	<!-- 横项滑动话题，对应上面的分类 -->
+	<scroll-view class="scroll-box" scroll-x="{{true}}" enable-flex="{{true}}">
+    <block wx:for="{{tabList}}" wx:key="index">
+      <view class="huati-box" hover-class="img-hover" bindtap="onPressHuati" data-index="{{index}}">
+        <image class="huati-img" mode="aspectFill" src="/images/icon/user_ic.png"/>
+        <view class="huati-mark">#{{item}}</view>
+      </view>
+    </block>
+  </scroll-view>
+	<!-- 内容列表 -->
+	<view class="a-gridlist">
+    <block wx:for="{{pageList}}" wx:key="index">
+      <view class="item-box" bindtap="onPressItem" data-tag="{{item.src}}">
+        <view class="item-layout" hover-class="img-hover">
+          <image class="item-img" mode="aspectFill" src="{{item.src}}"/>
+          <view class="item-text item-mark"> {{item.desc}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <empty wx:if="{{pageList.length < 1}}"/>
 </view>
+

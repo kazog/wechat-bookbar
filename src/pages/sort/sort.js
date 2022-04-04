@@ -1,7 +1,12 @@
 // 
 Page({
     data: {
-
+        tabList: ['推荐', '日榜', '周榜', '月榜'],
+        tabIndex: 0,
+        query: '',
+        pageNum: 1,
+        hasMore: true,
+        pageList: []
     },
 
     onLoad: function (options) {
@@ -27,7 +32,7 @@ Page({
     onPullDownRefresh: function () {
 
     },
-    
+
     onReachBottom: function () {
 
     },

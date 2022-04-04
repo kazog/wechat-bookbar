@@ -28,7 +28,7 @@ export function queryHotBooks(data={}) {
 export function queryBooks(data={}) {
     return request({
         url: '/book/books',
-        method: 'GET',
+        method: 'POST',
         data
     });
 }
