@@ -47,7 +47,9 @@
   max-height: 71vh;
   overflow-y: scroll;
   display: grid;
-  grid-gap: 20rpx;
+  column-gap: 20rpx;
+  row-gap: 20rpx;
+  grid-template-rows: repeat(10, 180rpx);
   grid-template-columns: repeat(2, 250rpx);
   /* background-color: salmon; */
 }

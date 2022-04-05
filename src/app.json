@@ -10,14 +10,20 @@
     "pages/my/feedback/feedback",
     "pages/my/share/share",
     "pages/my/about/about",
-    "pages/my/prize/prize",
-    "pages/my/order/order",
-    "pages/my/order_record/order_record",
-    "pages/index/index",
-    "pages/home/author/author",
-    "subpack/pages/book/book",
     "pages/sort/list/list",
     "pages/sort/detail/detail"
+  ],
+  "subpackages": [
+    {
+      "root": "subpack",
+      "pages": [
+        "pages/index/index",
+        "pages/book/book",
+        "pages/order/order",
+        "pages/prize/prize",
+        "pages/author/author"
+      ]
+    }
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -50,6 +56,12 @@
         "text": "我的"
       }
     ]
+  },
+  "preloadRule": {
+    "pages/home/home": {
+      "network": "wifi",
+      "packages": ["subpack"]
+    }
   },
   "usingComponents": {
     "empty": "/components/empty/empty",

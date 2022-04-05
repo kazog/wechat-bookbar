@@ -72,12 +72,12 @@
 
 /* 列表 */
 .item-box {
-  width: 50%;
-}
-.item-layout {
+  width: 45.5vw;
+  margin-left: 3vw;
+  margin-bottom: 24rpx;
+
   overflow: hidden;
   position: relative;
-  margin: 6rpx;
   height: 476rpx;
 }
 .item-img {
@@ -87,7 +87,7 @@
 }
 .item-mark {
   width: 100%;
-  height: 96rpx;
+  height: 112rpx;
   /* top: 0; */
   bottom: 0;
   position: absolute;

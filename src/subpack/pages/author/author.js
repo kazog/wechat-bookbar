@@ -1,4 +1,4 @@
-// pages/home/list/list.js
+// subpack/pages/author/author.js
 Page({
 
   /**

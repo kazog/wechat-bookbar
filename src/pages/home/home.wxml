@@ -29,10 +29,8 @@
     <view class="a-gridlist">
         <block wx:for="{{pageList}}" wx:key="index">
             <view class="item-box" bindtap="onPressItem" data-tag="{{item.src}}">
-                <view class="item-layout" hover-class="img-hover">
-                    <image class="item-img" mode="aspectFill" src="{{item.url}}" />
-                    <view class="item-text item-mark"> {{item.name}}</view>
-                </view>
+                <image class="item-img" mode="aspectFill" lazy-load src="{{item.url}}" />
+                <view class="item-text item-mark"> {{item.name}}</view>
             </view>
         </block>
     </view>

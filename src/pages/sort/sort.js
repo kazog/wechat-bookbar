@@ -32,45 +32,6 @@ Page({
         url:
           "https://cn.bing.com/th?id=OHR.LesserAntilles_ZH-CN3012679657_1920x1200.jpg",
       },
-      {
-        name: "鹿鼎记",
-        url:
-          "https://cn.bing.com/th?id=OHR.GrahamAdelie_ZH-CN2945763969_1920x1200.jpg",
-      },
-      {
-        name: "天龙八部",
-        url:
-          "https://cn.bing.com/th?id=OHR.HuggingDay_ZH-CN2984681593_1920x1200.jpg",
-      },
-      {
-        name: "笑傲江湖",
-        url:
-          "https://cn.bing.com/th?id=OHR.LesserAntilles_ZH-CN3012679657_1920x1200.jpg",
-      },
-      {
-        name: "鹿鼎记",
-        url:
-          "https://cn.bing.com/th?id=OHR.GrahamAdelie_ZH-CN2945763969_1920x1200.jpg",
-      },
-      {
-        name: "天龙八部",
-        url:
-          "https://cn.bing.com/th?id=OHR.HuggingDay_ZH-CN2984681593_1920x1200.jpg",
-      },{
-        name: "笑傲江湖",
-        url:
-          "https://cn.bing.com/th?id=OHR.LesserAntilles_ZH-CN3012679657_1920x1200.jpg",
-      },
-      {
-        name: "鹿鼎记",
-        url:
-          "https://cn.bing.com/th?id=OHR.GrahamAdelie_ZH-CN2945763969_1920x1200.jpg",
-      },
-      {
-        name: "天龙八部",
-        url:
-          "https://cn.bing.com/th?id=OHR.HuggingDay_ZH-CN2984681593_1920x1200.jpg",
-      },
     ],
   },
 
