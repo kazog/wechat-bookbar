@@ -4,28 +4,24 @@ Page({
     data: {
         user: {
             avatar: '/images/icon/user_ic.png',
-            nickName: '请登录'
+            nickName: '立即登录'
         },
         isLogin: true,
         tablist: [{
-            value: '收货地址',
-            icon: '/images/icon/fankui.png',
-            path: '/pages/my/feedback/feedback'
-        }, {
             value: '意见反馈',
-            icon: '/images/icon/fankui.png',
+            icon: '/images/icon/m_feedback.png',
             path: '/pages/my/feedback/feedback'
         }, {
             value: '分享好友',
-            icon: '/images/icon/fenxiang.png',
+            icon: '/images/icon/m_share.png',
             path: '/pages/my/share/share'
         }, {
             value: '打赏',
-            icon: '/images/icon/send_aid.png',
+            icon: '/images/icon/m_gift.png',
             path: '/pages/my/aid/aid'
         }, {
             value: '关于',
-            icon: '/images/icon/about.png',
+            icon: '/images/icon/m_about.png',
             path: '/pages/my/about/about'
         }]
     },

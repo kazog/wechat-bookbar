@@ -8,7 +8,7 @@
 .top-bg {
   top: 0;
   width: 100%;
-  height: 520rpx;
+  height: 560rpx;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -17,13 +17,13 @@
 }
 .top-bg-img {
   width: 100%;
-  height: 310rpx;
+  height: 400rpx;
   position: absolute;
 }
 .top-layout {
   color: #232323;
   z-index: 1;
-  margin-top: 236rpx;
+  margin-top: 326rpx;
   padding-left: 32rpx;
   padding-right: 32rpx;
   display: flex;
@@ -67,8 +67,11 @@
   justify-content: center;
   background-color: #f5a62f;
 }
+.user-data-box {
+  margin-top: 16rpx;
+}
 .tab-layout {
-  margin-top: 518rpx;
+  margin-top: 560rpx;
   display: flex;
   justify-content: center;
   background-color: white;
@@ -100,6 +103,7 @@
   position: absolute;
   background-color: #232323;
 }
+
 .gridlist {
   display: flex;
   flex-wrap: wrap;

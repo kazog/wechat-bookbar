@@ -1,99 +1,108 @@
 /*  */
 .h-container {
-    flex: 1;
-    padding: 0 8rpx;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-  }
-  .tab-box {
-    display: flex;
-    margin: 0 24rpx;
-  }
-  .tab-view2 {
-    color: #232323;
-    font-size: 36rpx;
-    font-weight: bold;
-  }
-  .tab-view {
-    flex: 1;
-    color: #676767;
-    font-size: 30rpx;
-    line-height: 96rpx;
-  }
-  .tab-hover {}
-  .img-hover {
-    /* position: relative; */
-    opacity: 0.87;
-    transform: scale(0.97, 0.97);
-    background-color: #F3F3F3;
-  }
-  /* 话题 */
-  .scroll-box {
-    width: 100%;
-    height: 120rpx;
-    display: flex;
-    margin: 24rpx 6rpx;
-  }
-  .huati-box {
-    display: flex;
-    margin-right: 8rpx;
-  }
-  .huati-img {
-    width: 150rpx;
-    height: 120rpx;
-    border-radius: 6rpx;
-  }
-  .huati-mark {
-    position: absolute;
-    color: white;
-    font-size: 30rpx;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150rpx;
-    height: 120rpx;
-    border-radius: 6rpx;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-  /* 列表 */
-  .item-box {
-    width: 50%;
-  }
-  .item-layout {
-    overflow: hidden;
-    position: relative;
-    margin: 6rpx;
-    height: 476rpx;
-  }
-  .item-img {
-    width: 100%; 
-    height: 100%; 
-    border-radius: 12rpx;
-  }
-  .item-mark {
-    width: 100%;
-    height: 96rpx;
-    /* top: 0; */
-    bottom: 0;
-    position: absolute;
-    /* padding: 0 24rpx; */
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    border-radius: 12rpx;
-    background: linear-gradient(#00000010, #00000090);
-  }
-  
-  .item-text {
-    font-size: 32rpx;
-    color: white;
-    text-indent: 24rpx;
-    overflow: hidden;
-  }
-  
-  .swiper-item {
-    width: 100%;
-    height: 300rpx;
-    border-radius: 6rpx;
-  }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.tab-box {
+  display: flex;
+  margin: 0 32rpx;
+  overflow-x: scroll;
+  align-items: baseline;
+}
+.tab-v2 {
+  color: #232323;
+  font-size: 36rpx;
+  font-weight: 700;
+}
+.tab-view {
+  min-width: 48rpx;
+  color: #676767;
+  font-size: 30rpx;
+  line-height: 96rpx;
+  padding-right: 48rpx;
+  /* background-color: beige; */
+}
+.tab-hover {
+}
+.img-hover {
+  /* position: relative; */
+  opacity: 0.87;
+  transform: scale(0.97, 0.97);
+  background-color: #f3f3f3;
+}
+
+.swiper-box {
+  margin: 0 24rpx;
+  height: 280rpx;
+}
+.swiper-item {
+  width: 100%;
+  height: 280rpx;
+  border-radius: 6rpx;
+}
+
+/* 话题 */
+.scroll-box {
+  margin: 32rpx;
+  height: 88rpx;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+.huati-box {
+  min-width: 180rpx;
+  width: 180rpx;
+  display: flex;
+  margin-right: 8rpx;
+}
+.huati-box::-webkit-scrollbar {
+  display: none;
+}
+.huati-item {
+  width: 160rpx;
+  height: 88rpx;
+  border-radius: 8rpx;
+
+  color: white;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+/* 列表 */
+.item-box {
+  width: 50%;
+}
+.item-layout {
+  overflow: hidden;
+  position: relative;
+  margin: 6rpx;
+  height: 476rpx;
+}
+.item-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+}
+.item-mark {
+  width: 100%;
+  height: 96rpx;
+  /* top: 0; */
+  bottom: 0;
+  position: absolute;
+  /* padding: 0 24rpx; */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 12rpx;
+  background: linear-gradient(#00000010, #00000090);
+}
+
+.item-text {
+  color: white;
+  font-size: 32rpx;
+  font-weight: 600;
+  text-indent: 24rpx;
+  overflow: hidden;
+}

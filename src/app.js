@@ -5,7 +5,8 @@
 
 App({
   consts: {
-
+    width: 375,
+    height: 720,
   },
   onLaunch: function () {
     if (!wx.cloud) {

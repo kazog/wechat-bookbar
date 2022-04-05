@@ -1,13 +1,15 @@
 <!--  -->
 <view class="h-container">
-    <header />
+    <header back="{{false}}" />
     <!-- tab 关注 推荐 各类。。。 -->
     <view class="tab-box">
-        <block wx:for="{{tabList}}" wx:key="index">
-            <view class="tab-view{{index == tabIndex ? ' tab-view2': ''}}" hover-class="tab-hover" bindtap="onChangeTab" data-index="{{index}}">{{item}}</view>
+        <block wx:for="{{tabList}}" wx:key="item">
+            <view class="tab-view" hover-class="tab-hover" bindtap="onChangeTab" data-index="{{index}}">
+                <text class="{{index == tabIndex ? 'tab-v2': ''}}">{{item}}</text>
+            </view>
         </block>
     </view>
-    <swiper indicator-dots="{{indicator}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <swiper class="swiper-box" indicator-dots="{{indicator}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
         <block wx:for="{{banners}}" wx:key="item">
             <swiper-item class="swiper-item">
                 <image class="swiper-item" src="{{item}}" mode="aspectFill" />
@@ -15,21 +17,21 @@
         </block>
     </swiper>
     <!-- 横项滑动话题，对应上面的分类 -->
-    <scroll-view class="scroll-box" scroll-x="{{true}}" enable-flex="{{true}}">
+    <!-- <scroll-view class="scroll-box" scroll-x="{{true}}" enable-flex="{{true}}"> -->
+    <view class="scroll-box">
         <block wx:for="{{tagList}}" wx:key="index">
-            <view class="huati-box" hover-class="img-hover" bindtap="onPressHuati" data-index="{{index}}">
-                <image class="huati-img" mode="aspectFill" style="background-color: {{item.color}};" />
-                <view class="huati-mark">{{item.title}}</view>
+            <view class="huati-box" hover-class="a-hover" bindtap="onPressHuati" data-index="{{index}}">
+                <view class="huati-item row-center" style="background-color: {{item.color}};">{{item.title}}</view>
             </view>
         </block>
-    </scroll-view>
+    </view>
     <!-- 内容列表 -->
     <view class="a-gridlist">
         <block wx:for="{{pageList}}" wx:key="index">
             <view class="item-box" bindtap="onPressItem" data-tag="{{item.src}}">
                 <view class="item-layout" hover-class="img-hover">
-                    <image class="item-img" mode="aspectFill" src="{{item.src}}" />
-                    <view class="item-text item-mark"> {{item.num}}</view>
+                    <image class="item-img" mode="aspectFill" src="{{item.url}}" />
+                    <view class="item-text item-mark"> {{item.name}}</view>
                 </view>
             </view>
         </block>

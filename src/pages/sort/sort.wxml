@@ -1,26 +1,31 @@
 <!--  -->
-<view class="h-container">
-  <header />
-	<!-- 横项滑动话题，对应上面的分类 -->
-	<scroll-view class="scroll-box" scroll-x="{{true}}" enable-flex="{{true}}">
-    <block wx:for="{{tabList}}" wx:key="index">
-      <view class="huati-box" hover-class="img-hover" bindtap="onPressHuati" data-index="{{index}}">
-        <image class="huati-img" mode="aspectFill" src="/images/icon/user_ic.png"/>
-        <view class="huati-mark">#{{item}}</view>
-      </view>
+<view class="s-container">
+  <header back="{{false}}" title="分类" />
+  <swiper class="swiper-box" indicator-dots="{{indicator}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{banners}}" wx:key="item">
+      <swiper-item class="swiper-item">
+        <image class="swiper-item" src="{{item}}" mode="aspectFill" />
+      </swiper-item>
     </block>
-  </scroll-view>
-	<!-- 内容列表 -->
-	<view class="a-gridlist">
-    <block wx:for="{{pageList}}" wx:key="index">
-      <view class="item-box" bindtap="onPressItem" data-tag="{{item.src}}">
-        <view class="item-layout" hover-class="img-hover">
-          <image class="item-img" mode="aspectFill" src="{{item.src}}"/>
-          <view class="item-text item-mark"> {{item.desc}}</view>
+  </swiper>
+  <!-- 内容栏 -->
+  <view class="row sort-box">
+    <view class="sort-tab-box">
+      <block wx:for="1234567i" wx:key="index">
+        <view class="sort-tab-view {{tabIndex == index ? 'sort-tab-sel':''}}" bindtap="onChangeTab" data-tag="{{index}}">
+          <text class="">啊哈哈</text>
         </view>
-      </view>
-    </block>
+      </block>
+    </view>
+    <!--  -->
+    <view class="sort-grid">
+      <block wx:for="{{pageList}}" wx:key="item">
+        <view class="item-box" bindtap="onPressItem" data-tag="{{item.src}}">
+            <image class="item-img" mode="aspectFill" src="{{item.src}}" />
+            <view class="item-text item-mark column-center"> {{item.name}}</view>
+        </view>
+      </block>
+    </view>
+    <empty wx:if="{{pageList.length < 1}}" />
   </view>
-  <empty wx:if="{{pageList.length < 1}}"/>
 </view>
-

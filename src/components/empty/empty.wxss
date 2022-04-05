@@ -16,8 +16,8 @@
   justify-content: center;
 }
 .v-item-img {
-  width: 178rpx;
-  height: 178rpx;
+  width: 360rpx;
+  height: 360rpx;
   border-radius: 8rpx;
 }
 

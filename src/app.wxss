@@ -11,11 +11,11 @@ Page {
   flex-direction: column;
   background-color: #F8F8F8;
   font-weight: 400;
-  font-family: PingFangSC-Regular;
+  font-family: PingFangSC-Medium;
 }
 
 .container {
-  min-height: 100%;
+  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -40,6 +40,11 @@ Page {
 .column-center {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
   align-items: center;
   justify-content: center;
 }
