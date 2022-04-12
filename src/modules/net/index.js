@@ -70,13 +70,14 @@ export function request({
   // data = requestParams(data, host);
   const options = { url, method, data, header };
 
-  _pointLog("=========> Request <==========", options);
+  _pointLog("=========> Request: ", options);
+
   return new Promise((resolve) => {
     const result = { message: "", code: -1, data: null, header: null };
     wx.request({
       ...options,
       success: (res) => {
-        _pointLog("=========> Response :" + url, res);
+        _pointLog("=========> Response: " + url, res);
         if (res.statusCode == 200) {
           resolve(_parseData(res, result));
         } else {
@@ -84,7 +85,7 @@ export function request({
         }
       },
       fail: (err) => {
-        _pointLog("=========> Error <==========", err);
+        _pointLog("=========> Error: " + url, err);
         resolve(_parseError(err, result));
       },
       complete: () => {
