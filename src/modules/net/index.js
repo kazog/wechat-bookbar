@@ -189,11 +189,11 @@ function _parseError(data = {}, result) {
     result.code = data.statusCode;
     result.message =
       data.errMsg == "request:ok"
-        ? "抱歉，请求失败，请稍后再试！"
+        ? "抱歉，服务升级中，请稍后再试！"
         : data.errMsg;
   } else if (data.errMsg) {
     result.code = -10101;
-    result.message = "抱歉，网络异常，请稍后再试！-3";
+    result.message = "抱歉，网络拥挤，请稍后再试！";
     // result.message = data.errMsg || '抱歉，系统升级中！';
   }
 

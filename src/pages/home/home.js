@@ -3,7 +3,8 @@
  * Date: 2022-04
  * Desc: 首页
  */
-import { queryBooks, queryHotBooks } from "../../modules/api/index";
+
+import { loginAccount } from "../../modules/api/cloud";
 
 Page({
   data: {
@@ -47,7 +48,8 @@ Page({
   },
 
   onLoad: function () {
-    this.getHotBooks();
+    this.onLoginAccount();
+    
   },
 
   onShow: function () {},
@@ -55,10 +57,6 @@ Page({
   getHotBooks: async function () {
     let that = this;
     let pageNum = that.data.pageNum;
-    let { success, data } = await queryHotBooks({
-      pageNum,
-      pageSize: 10,
-    });
   },
 
   onPullDownRefresh: function () {
@@ -95,4 +93,9 @@ Page({
       url: "/pages/home/detail/detail",
     });
   },
+  onLoginAccount: async function() {
+    const that = this;
+    const res = await loginAccount()
+    console.log(res)
+  }
 });

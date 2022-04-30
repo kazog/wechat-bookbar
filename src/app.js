@@ -32,18 +32,19 @@ App({
   _initSystem: function () {
     wx.getSystemInfo({
       success: (res) => {
-        console.log(res)
         const bottomBarHeight = res.screenHeight - res.safeArea.bottom;
-        this.consts.windowWidth = res.windowWidth;
-        this.consts.screenHeight = res.screenHeight;
-        this.consts.windowHeight = res.windowHeight;
-        this.consts.height = res.safeArea.height;
-        this.consts.statusBarHeight = res.statusBarHeight;
-        this.consts.bottomBarHeight = bottomBarHeight;
-        this.consts.system = res.system;
-        this.consts.wifiEnabled = res.wifiEnabled;
-        this.consts.batteryLevel = res.batteryLevel;
-        console.log(this.consts)
+        let consts = {
+            windowWidth: res.windowWidth,
+            screenHeight: res.screenHeight,
+            windowHeight: res.windowHeight,
+            height: res.safeArea.height,
+            statusBarHeight: res.statusBarHeight,
+            bottomBarHeight: bottomBarHeight,
+            system: res.system,
+            wifiEnabled: res.wifiEnabled,
+            batteryLevel: res.batteryLevel
+        };    
+        this.consts = consts;
       },
     });
   },

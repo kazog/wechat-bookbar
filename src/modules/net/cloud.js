@@ -4,44 +4,37 @@
  * 网络配置项
  */
 
-/** 云函数
+/** 
  * options = {
- *  name: '',
+ *  url: '',
  *  config: { env: ‘云环境’ },
- *  data: {}
+ *  data: {type: 'path' }
  * }
  */
-export function query({ name, data = {}, config, loading, toast } = {}) {
-  
-  if(loading) {
+export function query({ url, data = {}, config, loading, toast } = {}) {
+  if (loading) {
     wx.showLoading({
       title: "加载中...",
     });
   }
-  if(!config) {
-    config = {env: 'ucaizi'}
+  if (!config) {
+    config = { env: "gift03-0grbbyvi246a9c3f" };
   }
-
+  const options = { name: url, data, config };
   // 云函数处理
   return new Promise((resolve) => {
     wx.cloud
-      .callFunction({
-        name,
-        data,
-        config
-      })
+      .callFunction(options)
       .then((res) => {
         _printLog(options, res);
-
-        if (res.errMsg.indexOf(":ok") > -1) {
-          resolve({
-            status: true,
-            data: res.result,
-          });
+        const result = res.result;
+        if (result) {
+          resolve(result);
         } else {
           resolve({
-            status: false,
-            message: "未查询到数据",
+            code: -100101,
+            message: "抱歉,网络拥挤,请稍后再试！",
+            data: null,
           });
         }
         wx.hideLoading();
@@ -49,8 +42,9 @@ export function query({ name, data = {}, config, loading, toast } = {}) {
       .catch((err) => {
         _printLog(options, err);
         resolve({
-          status: false,
-          message: "未查询到数据",
+          code: -100102,
+          message: "服务升级中,请稍候！",
+          data: null,
         });
         wx.hideLoading();
       });
@@ -81,7 +75,7 @@ export function upload(file, path) {
       // },
       // 成功回调
       success: (res) => {
-        _printLog('=========》上传成功', res)
+        _printLog("=========》上传成功", res);
         wx.hideLoading();
         if (res.errMsg.indexOf(":ok") > -1) {
           resolve({
@@ -134,6 +128,6 @@ async function parsePhone(cloudID) {
 }
 
 function _printLog(tag, res) {
-  console.log("---------> cloud ", tag);
+  console.log("=========> cloud: ", tag);
   console.log(res);
 }
